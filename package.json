@@ -3,24 +3,36 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 8002",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production next start -p 8002",
     "lint": "next lint"
   },
   "dependencies": {
+    "@aws-crypto/sha256-browser": "5.0.0",
+    "@aws-sdk/client-bedrock": "^3.438.0",
+    "@aws-sdk/client-bedrock-runtime": "^3.438.0",
+    "@aws-sdk/credential-provider-node": "3.391.0",
+    "@aws-sdk/node-http-handler": "3.374.0",
+    "@aws-sdk/protocol-http": "3.374.0",
+    "@aws-sdk/signature-v4": "3.374.0",
+    "@types/socket.io": "^3.0.2",
+    "aws-sdk": "2.1483.0",
+    "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.3"
+    "react-image-file-resizer": "^0.4.8",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.3"
+    "typescript": "^5"
   }
 }
