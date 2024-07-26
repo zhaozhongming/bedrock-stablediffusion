@@ -126,7 +126,7 @@ export default function Home() {
      <br/>
         <div className="before:h-[100px]">
         <textarea 
-          placeholder="Enter your prompts"
+          placeholder="Enter your prompts, e.g. a cat under the snow with blue eyes, covered by snow, cinematic style, medium shot, professional photo, animal"
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
           required
@@ -136,7 +136,7 @@ export default function Home() {
           
 
       <div className="inline-flex rounded-md shadow-sm" role="group">
-          <button type="button" disabled={loading} onClick={handleSubmit} className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700">
+          <button type="button" disabled={loading} onClick={handleSubmit} className="px-4 py-2 text-sm font-medium text-gray-900 bg-transparent border border-gray-900 rounded-s-lg hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700">
           Text2Image
         </button>
         <input type="file"
@@ -144,17 +144,18 @@ export default function Home() {
                   onChange={pickImage}
                   accept="image/*"
                   style={{ display: 'none' }} />
-        <button type="button" onClick={handleClick} disabled={loading} className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700">
-          PickImage
+        <button type="button" onClick={handleClick} disabled={loading} className="px-4 py-2 text-sm font-medium text-gray-900 bg-transparent border border-r-0 border-l-0 border-gray-900 hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700">
+          Pick
         </button>
-        <button type="button" onClick={handleSubmitImage} disabled={loading} className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700">
+        <button type="button" onClick={handleSubmitImage} disabled={loading} className="px-4 py-2 text-sm font-medium text-gray-900 bg-transparent border border-r-0 border-l-1 border-gray-900 hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700">
           Image2Image
         </button>
-        <button type="button" onClick={clear} className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700">
+         
+      <button type="button" onClick={clear} className="px-4 py-2 text-sm font-medium text-gray-900 bg-transparent border border-gray-900 rounded-e-lg hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700">
           Clear
         </button>
       </div>
-
+     
         </div>
       <br />
       <div id="gen_imagebox" className="p-3 mb-2 bg-body-tertiary rounded-3 text-center border">
