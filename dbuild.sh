@@ -1,1 +1,1 @@
-docker build --no-cache  -t my/stablediffusion -f Dockerfile .
+docker build --no-cache  -t myaibot/stablediffusion -f Dockerfile .
